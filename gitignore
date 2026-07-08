@@ -1,0 +1,124 @@
+# ============================================
+# FICHIERS DE CONFIGURATION & SECRETS
+# ============================================
+.env
+.env.local
+.env.*.local
+config.local.php
+
+# ============================================
+# IDE & ÉDITEURS
+# ============================================
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+*.sublime-project
+*.sublime-workspace
+.phpstorm.meta.php
+_ide_helper.php
+
+# ============================================
+# DÉPENDANCES & MODULES
+# ============================================
+vendor/
+node_modules/
+composer.lock
+package-lock.json
+yarn.lock
+
+# ============================================
+# FICHIERS GÉNÉRÉS & CACHE
+# ============================================
+.cache/
+cache/
+tmp/
+temp/
+logs/
+*.log
+.phpunit.result.cache
+.php_cs_fixer.cache
+
+# ============================================
+# UPLOADS & FICHIERS MÉDIAS
+# ============================================
+uploads/
+images/
+avatars/
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.zip
+*.rar
+
+# ============================================
+# BASE DE DONNÉES
+# ============================================
+*.db
+*.sqlite
+*.sqlite3
+*.sql
+!schema.sql
+dump.sql
+
+# ============================================
+# SYSTÈME D'EXPLOITATION
+# ============================================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+desktop.ini
+
+# ============================================
+# FICHIERS TEMPORAIRES
+# ============================================
+*.tmp
+*.bak
+*.swp
+*~
+.~*
+
+# ============================================
+# BUILD & DISTRIBUTION
+# ============================================
+dist/
+build/
+.env.production
+
+# ============================================
+# FICHIERS DE TEST
+# ============================================
+coverage/
+.phpunit/
+tests/reports/
+tests/coverage/
+
+# ============================================
+# OS & APPLICATION SPÉCIFIQUE
+# ============================================
+.AppleDouble
+.LSOverride
+Icon
+
+# ============================================
+# NPM & YARN (si tu utilises du JS)
+# ============================================
+.npm
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+
+# ============================================
+# FICHIERS PRIVÉS
+# ============================================
+secrets.txt
+credentials.json
+api-keys.txt
+*-private*

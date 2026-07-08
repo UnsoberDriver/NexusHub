@@ -2,7 +2,7 @@
 $db_host = 'sql212.byethost7.com';
 $db_name = 'b7_42358124_torme';
 $db_user = 'b7_42358124';
-$db_pass = '';
+$db_pass = 'Nicolas410';
 
 try {
     $pdo = new PDO(

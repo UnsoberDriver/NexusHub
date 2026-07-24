@@ -4,6 +4,7 @@ WIP
 /
 ├── .env
 └── www/
+    │
     ├── config/
     │   ├── config.php                    # Config générale de l'app
     │   ├── env.php                       # Chargement des variables d'environnement

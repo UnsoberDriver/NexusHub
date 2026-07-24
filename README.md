@@ -1,5 +1,5 @@
 WIP
-## 🏗️ Réorganisation proposée
+## Réorganisation proposée
 
 ```
 /

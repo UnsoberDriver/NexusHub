@@ -59,3 +59,8 @@ WIP
     ├── index.php                         # Point d'entrée principal
     └── .htaccess                         # Règles Apache (réécriture, sécurité)
 ```
+This project is proprietary — all rights reserved. See the LICENSE file for details.
+
+See also NOTICE.md for additional usage restrictions (including AI training).
+
+© 2026 Nicolas Boulloud.

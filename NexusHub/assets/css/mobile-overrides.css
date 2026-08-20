@@ -1,0 +1,166 @@
+/* mobile-overrides.css
+   Extrait de index.php (bloc <style> inline) pour permettre la mise en
+   cache navigateur et alléger le HTML servi à chaque requête. */
+
+@media (max-width: 768px) {
+    .chat-tabs {
+        background: #18191c !important;
+    }
+
+    #user-panel-mobile {
+        box-shadow: none;
+    }
+
+    .chat-body {
+        padding-top: 60px;
+    }
+
+    .chat-form input[type="text"] {
+        flex: 1 1 auto;
+    }
+
+    .btn-send {
+        display: none !important;
+        width: 0;
+        min-width: 0;
+        padding: 0;
+        margin: 0;
+        border: 0;
+        opacity: 0;
+        overflow: hidden;
+        transform: scale(0.8);
+        transition: opacity 0.15s ease, transform 0.15s ease;
+    }
+    .chat-form.input-active .btn-send {
+        display: inline-flex !important;
+        width: auto;
+        min-width: fit-content;
+        padding: 0 18px;
+        margin: 0;
+        border: initial;
+        opacity: 1;
+        overflow: visible;
+        transform: scale(1);
+    }
+
+    .chat-form .btn-attach,
+    .chat-form .gif-wrapper,
+    .chat-form .emoji-wrapper {
+        transition: opacity 0.15s ease, transform 0.15s ease;
+    }
+    .chat-form.input-active .btn-attach,
+    .chat-form.input-active .gif-wrapper,
+    .chat-form.input-active .emoji-wrapper {
+        display: none;
+        opacity: 0;
+        transform: scale(0.8);
+    }
+
+    /* Conteneur des messages : supprime le padding latéral fixe (16px en
+       desktop) qui laisse des bandes vides sur les côtés en mobile */
+    /* styles.css applique .page-content{padding:20px} en dessous de 480px
+       pour la page de connexion (.auth-box) — mais .page-content est aussi
+       le conteneur du chat, donc ce padding décale toute l'app (et la
+       scrollbar des messages) de 20px vers l'intérieur. On neutralise ça
+       uniquement quand le chat est présent. */
+    .page-content:has(.chat-app) {
+        padding: 0;
+    }
+
+    .chat-header {
+        height: 44px;
+    }
+
+    .chat-search-input {
+        display: none !important;
+    }
+
+    .btn-back {
+        color: #fff;
+        font-size: 28px;
+        padding: 6px 10px;
+    }
+
+    /* Les icônes vidéo/appel du header réutilisent .btn-profile-toggle
+       (margin-left:auto, pas de display:flex) au lieu de .btn-search
+       (display:flex centré) — ça les décale et les désaligne verticalement
+       par rapport aux icônes épingle/recherche du même header. */
+    .chat-header-actions .btn-profile-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 0;
+    }
+
+    /* Centrage vertical robuste : chaque bouton remplit toute la hauteur
+       de la barre puis centre son icône dedans, au lieu de dépendre de
+       l'align-items du conteneur parent. */
+    .chat-header-actions button,
+    .chat-header .btn-back {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* Empêche tout élément parent de laisser un espace résiduel à droite
+       qui décalerait la barre de scroll vers l'intérieur */
+    .chat-panels,
+    .tab-content,
+    .general-main,
+    .mp-main {
+        width: 100%;
+        padding-right: 0;
+        margin-right: 0;
+    }
+
+    /* Messages : la règle desktop limite chaque message à 80% de large
+       (styles.css : .message{max-width:80%;align-self:flex-start}).
+       align-self:flex-start fait que l'élément s'ajuste à son contenu
+       (fit-content) : lever juste le max-width ne suffit pas, il faut
+       aussi forcer une largeur explicite pour occuper tout l'écran. */
+    .messages .message {
+        max-width: 100%;
+        width: 100%;
+        align-self: stretch;
+        padding-left: 4px;
+        padding-right: 4px;
+        gap: 6px;
+    }
+    .messages .message.own {
+        align-self: stretch;
+    }
+
+    /* Avatars plus proches du bord gauche pour laisser plus de place au texte */
+    .messages .msg-avatar {
+        width: 30px;
+        height: 30px;
+        margin-left: -4px;
+    }
+
+    /* Liste des contacts : éléments plus grands, plus faciles à toucher */
+    #mp-contacts-list .contact-card {
+        padding: 12px 10px;
+        gap: 12px;
+        font-size: 17px;
+    }
+    #mp-contacts-list .contact-avatar {
+        width: 48px;
+        height: 48px;
+        font-size: 20px;
+    }
+    #mp-contacts-list .contact-name {
+        font-size: 17px;
+    }
+
+    .chat-form {
+        gap: 6px;
+    }
+    .chat-form button.btn-attach,
+    .chat-form button.btn-emoji,
+    .chat-form button.btn-gif {
+    width: 34px;
+    font-size: 11px;
+    padding: 0;
+}
+}

@@ -1,5 +1,20 @@
-WIP
-## Réorganisation proposée
+# NexusHub
+
+A recipe site I coded in pure PHP to improve my web dev skills (no framework, I wanted to understand what's happening under the hood). There's a public area to browse recipes, an account system, and an admin dashboard to manage everything.
+
+## What it does
+
+* Recipe list filterable by category, with a detailed page per recipe (ingredients, steps, time, difficulty)
+* User accounts: sign up / log in, with a "stay logged in" option (remember-me secured by token)
+* Admin dashboard to ban reported users
+* Contact form in a popup (AJAX, protected by a CSRF token)
+* will add Bilingual FR/EN site, auto-detected based on browser language
+
+## Stack
+
+Native PHP, MySQL/PDO, vanilla HTML/CSS/JS. No framework, no build tool. 
+
+## Project structure
 ```
 /
 ├── .bash_history

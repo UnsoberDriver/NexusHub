@@ -1,5 +1,6 @@
 # NexusHub
 
+Discover real-time messaging online here : **[nexushub.a-is.dev](https://nexushub.a-is.dev)**
 A real-time messaging app I coded in pure PHP to improve my web dev skills (no framework, I wanted to understand what's happening under the hood). There's a public/private chat system, voice & video calls with WebRTC, and a full account system.
 
 ## What it does

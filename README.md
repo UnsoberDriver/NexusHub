@@ -1,18 +1,23 @@
 # NexusHub
 
-A recipe site I coded in pure PHP to improve my web dev skills (no framework, I wanted to understand what's happening under the hood). There's a public area to browse recipes, an account system, and an admin dashboard to manage everything.
+A real-time messaging app I coded in pure PHP to improve my web dev skills (no framework, I wanted to understand what's happening under the hood). There's a public/private chat system, voice & video calls with WebRTC, and a full account system.
 
 ## What it does
 
-* Recipe list filterable by category, with a detailed page per recipe (ingredients, steps, time, difficulty)
-* User accounts: sign up / log in, with a "stay logged in" option (remember-me secured by token)
-* Admin dashboard to ban reported users
-* Contact form in a popup (AJAX, protected by a CSRF token)
-* will add Bilingual FR/EN site, auto-detected based on browser language
+- Real-time messaging (direct messages, group/general chat)
+- Voice & video calls (WebRTC, peer-to-peer, signalling via polling)
+  - Screen sharing with adjustable capture volume
+  - Camera flip, mute, speaker toggle, fullscreen
+  - Minimizable call bubble that can be dragged anywhere on screen
+- User accounts: sign up / log in, with a "stay logged in" option (remember-me secured by token)
+- Login protected by reCAPTCHA and per-identifier/per-IP rate limiting (anti brute-force)
+- Password reset via emailed link (token-based, expires after 1 hour)
+- Browser vs. desktop app entry point (native app packaged with an installer)
+- GIF favorites, presence/online status, message history
 
 ## Stack
 
-Native PHP, MySQL/PDO, vanilla HTML/CSS/JS. No framework, no build tool. 
+Native PHP, MySQL/PDO, vanilla HTML/CSS/JS, WebRTC. No framework, no build tool.
 
 ## Project structure
 ```

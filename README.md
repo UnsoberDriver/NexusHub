@@ -2,6 +2,7 @@ WIP
 ## Réorganisation proposée
 ```
 /
+├── .bash_history
 ├── .env
 └── www/
     │

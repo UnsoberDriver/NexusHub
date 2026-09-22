@@ -56,6 +56,13 @@ WIP
     │   ├── downloads/
     │   └── avatars/
     │
+    ├── api/                          # App mobile
+    │   ├── contact.php
+    │   ├── profil.php
+    │   ├── csrf_tocken.php
+    │   ├── screenshare.php
+    │   └── mobile_login.php
+    │
     ├── favicon.ico
     ├── index.php                         # Point d'entrée principal
     └── .htaccess                         # Règles Apache (réécriture, sécurité)
